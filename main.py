@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from datetime import datetime, timezone
 import os
 import pytz
+import webserver
 
 # ======================
 # Load ENV
@@ -124,5 +125,5 @@ async def guild_dance_reminder():
         )
 
 
-
+webserver.keep_alive()
 bot.run(token)
